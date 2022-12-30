@@ -1,0 +1,45 @@
+let products = [{
+    name: "Üzüm",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_36-1024x1024.jpg",
+    price: 25,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Kivi",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_18-1024x1024.jpg",
+    price: 30,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Elma",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_10-1024x1024.jpg",
+    price: 15,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Çilek",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_01-1024x1024.jpg",
+    price: 50,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Turp",
+    image: "https://images.migrosone.com/sanalmarket/product/28470009/turp-kirmizi-kg-16f29f-1650x1650.jpg",
+    price: 15,
+    category: "sebzeler"
+}, {
+    name: "Domates",
+    image: "https://images.migrosone.com/sanalmarket/product/28080000/domates-kg-c7462d-1650x1650.jpg",
+    price: 15,
+    category: "sebzeler"
+}, {
+    name: "Lahana",
+    image: "https://images.migrosone.com/sanalmarket/product/28230009/lahana-kirmizi-kg-bedb20-1650x1650.jpg",
+    price: 10,
+    category: "sebzeler"
+}, {
+    name: "Patates",
+    image: "https://images.migrosone.com/sanalmarket/product/28290036/28290036-6a65f9-1650x1650.jpg",
+    price: 9,
+    category: "sebzeler"
+}];

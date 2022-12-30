@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <title>Market Products</title>
+</head>
+<body>
+    <div class="container-fluid p-0 ">
+        <nav class="navbar navbar-expand-sm navbar-light bg-info p-0 m-0">
+            <div class="container m-0 p-0">
+            <a class="navbar-brand" href="#"><i class="bi bi-cart-fill ms-4" style="font-size: 30px;"></i> </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-0 p-0" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Tüm Ürünler <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Meyveler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sebzeler</a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    </div>
+    <div class="container" >
+       
+        
+        <div class="row bg-primary my-2 text-center">
+                <h1> Markete Hoşgeldiniz! </h1>
+        </div>
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img2/1.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img2/2.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img2/3.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="row bg-primary my-2 text-center">
+            <h2> Ürünlemiz</h2>
+        </div>
+        <div class="container text-center my-2">
+            <a  class="btn btn-lg btn-danger btn-outline-info" onclick="listele('tumu')">Tüm ürünler</a>
+            <a  class="btn btn-lg btn-danger btn-outline-info " onclick="listele('meyveler')">Meyveler</a>
+            <a  class="btn btn-lg btn-danger btn-outline-info" onclick="listele('sebzeler')">Sebzeler</a>
+        </div>
+        <div class="row" id="productcontainer">
+         
+          
+        </div>
+
+    </div>
+    <!-- Modal trigger button -->
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+      Launch
+    </button>
+    
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">SATIL ALMA İŞLEMİ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalbody"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">EKLE</button>
+                    <button type="button" class="btn btn-primary">Geri Dön</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+    
+    </script>
+    <script>
+        
+        let products = [{
+    name: "Üzüm",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_36-1024x1024.jpg",
+    price: 25,
+    discountRate: 30,
+    category: "meyveler"
+}, {
+    name: "Kivi",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_18-1024x1024.jpg",
+    price: 30,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Elma",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_10-1024x1024.jpg",
+    price: 15,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Çilek",
+    image: "https://fruitstore.ththeme.net/wp-content/uploads/2022/02/fruit_01-1024x1024.jpg",
+    price: 50,
+    discountRate: 50,
+    category: "meyveler"
+}, {
+    name: "Turp",
+    image: "https://images.migrosone.com/sanalmarket/product/28470009/turp-kirmizi-kg-16f29f-1650x1650.jpg",
+    price: 15,
+    category: "sebzeler"
+}, {
+    name: "Domates",
+    image: "https://images.migrosone.com/sanalmarket/product/28080000/domates-kg-c7462d-1650x1650.jpg",
+    price: 15,
+    category: "sebzeler"
+}, {
+    name: "Lahana",
+    image: "https://images.migrosone.com/sanalmarket/product/28230009/lahana-kirmizi-kg-bedb20-1650x1650.jpg",
+    price: 10,
+    category: "sebzeler"
+}, {
+    name: "Patates",
+    image: "https://images.migrosone.com/sanalmarket/product/28290036/28290036-6a65f9-1650x1650.jpg",
+    price: 9,
+    category: "sebzeler"
+}];
+        
+        var contain=document.getElementById("productcontainer");
+        var listedproducts;
+        listele("sebzeler");
+
+        function listele(kategori)
+        {
+            if (kategori!="tumu")
+            listedproducts = products.filter(product=>product.category==kategori);
+            else
+            listedproducts = products;
+
+            doldur();
+        }
+
+        var modalbody=document.getElementById("modalbody");
+        changemodalbody("ARABA");
+        function changemodalbody(icerik)
+        {
+            modalbody.innerText=icerik+ " isimli ürünü satın almak istiyor musunuz?";
+        }
+
+        function doldur()
+        {
+        contain.innerHTML="";
+        listedproducts.forEach(function(item){
+            var discount=0;
+            var displayvalue="none"
+            if(item.discountRate!=undefined) 
+            {
+                discount=item.discountRate;
+                displayvalue="";
+            }
+            contain.innerHTML+=` <div class="card col-sm-4  col-md-3 col-xl-2 p-2">
+            <div class="card-title text-center">
+                <div style="display:${displayvalue}" class="badge bg-primary w-100"> % ${discount} indirim</div>
+                <div class="display-6">${item.name}</div>
+            </div>
+            <div class="card-body text-center">
+                <img src="${item.image}" class="img-thumbnail">
+                Fiyat: ${item.price}TL
+                <button onclick="changemodalbody('${item.name}')" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalId">Satın Al</button>
+            </div>
+          </div>`;
+
+            });
+        }
+       
+        
+          
+
+    </script>
+</body>
+</html>
